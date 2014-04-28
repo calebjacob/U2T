@@ -1,0 +1,24 @@
+{
+  "name": "UT2",
+  "description": "The website of Under Two Tables",
+  "version": "0.0.0",
+  "author": "Caleb Jacob <hello@calebjacob.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamceege/griddle"
+  },
+  "dependencies": {
+    "grunt": "*",
+    "grunt-cache-bust": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "load-grunt-tasks": "*",
+    "stylus-import-tree": "*"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
