@@ -1,0 +1,49 @@
+.image-box
+  text-align: center
+  background: $white
+  color: $black
+  font-style: italic
+  background: #fff no-repeat center center
+  background-size: cover
+  position: relative
+
+  h2
+    color: $black
+
+  @media (max-width: 990px)
+    width: calc(100% + 2.4em)
+    margin-left: -1.2em
+
+  @media (max-width: 772px)
+
+    .image-box__image
+      width: 100%
+      padding: 3.6em
+
+    .image-box__content
+      width: 100%
+      position: static
+      padding-top: 0
+
+      .vertical-align
+        position: static
+        transform: none
+
+  
+
+.image-box__image
+  width: 50%
+  padding: 3.6em 0 3.6em 3.6em
+
+  img
+    display: block
+    width: 100%
+
+.image-box__content
+  width: 50%
+  height: 100%
+  position: absolute
+  top: 0
+  right: 0
+  padding: 3.6em
+  
