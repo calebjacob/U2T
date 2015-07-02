@@ -1,11 +1,22 @@
-app.directives.example = (function() {
+app.directives.contactUs = (function() {
   var directive = {};
   directive.settings = {};
-  directive.settings.querySelector = '[directive-my-example]';
+  directive.settings.querySelector = '[directive-contact-us]';
 
-  directive.init = function initMyExample(element) {
-    console.log('my example directive ran');
+  directive.init = function(element) {
+    element.addEventListener('click', mailTo);
   };
+
+  function mailTo() {
+    var prefix = 'band';
+    var at = '&#64;';
+    var domain = 'undertwotables';
+    var dotCom = '.com';
+
+    var emailAddress = (prefix + at + domain + dotCom).replace(/&#64;/g, '@');
+
+    window.location = 'mailto:' + emailAddress;
+  }
 
   return directive;
 }());
