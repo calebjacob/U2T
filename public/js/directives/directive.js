@@ -1,7 +1,7 @@
 app.directives.contactUs = (function() {
   var directive = {};
   directive.settings = {};
-  directive.settings.querySelector = '[directive-contact-us]';
+  directive.settings.querySelectorAll = '[directive-contact-us]';
 
   directive.init = function(element) {
     element.addEventListener('click', mailTo);
