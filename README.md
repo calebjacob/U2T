@@ -1,30 +1,55 @@
-U2T
-===
+# Under Two Tables
 
-Under Two Table's rockin' website!
+This project uses the Remix framework.
 
-## Getting Started
+- [Remix Docs](https://remix.run/docs)
 
-First, install all dependencies:
-```
-npm install
-```
+## Development
 
-To get working, the last thing to do is run Grunt's default task:
-```
-grunt
+From your terminal:
+
+```sh
+npm run dev
 ```
 
-This will build your JS and Stylus files for the first time and start watching for future changes and automate builds as files change.
+This starts your app in development mode, rebuilding assets on file changes.
 
-## Grunt Tasks
+## Deployment
 
-There are two main Grunt tasks that are used depending on whether you're about to deploy to production, or are developing locally: `development` and `production`
+First, build your app for production:
 
-### development
+```sh
+npm run build
+```
 
-This task will concatenate your public JS files, build out your Stylus files, and bust your browser cache on for those files.
+Then run the app in production mode:
 
-### production
+```sh
+npm start
+```
 
-This task does everything that `development` does but also uglifies your public JS. Since this uglification process is a hefty one, running this everytime in a local development environment as a file changes would be pretty tedious to wait for.
+Now you'll need to pick a host to deploy it to.
+
+### DIY
+
+If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
+
+Make sure to deploy the output of `remix build`
+
+- `build/`
+- `public/build/`
+
+### Using a Template
+
+When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
+
+```sh
+cd ..
+# create a new project, and pick a pre-configured host
+npx create-remix@latest
+cd my-new-remix-app
+# remove the new project's app (not the old one!)
+rm -rf app
+# copy your app over
+cp -R ../my-old-remix-app/app app
+```
