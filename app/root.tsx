@@ -10,11 +10,13 @@ export const meta: MetaFunction = () => {
 export function links() {
   return [
     { rel: 'stylesheet', href: resetStyles },
-    { rel: 'stylesheet', href: mainStyles },
+    { rel: 'stylesheet', href: mainStyles }
   ];
 }
 
 export default function App() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <html lang="en">
       <head>
@@ -46,10 +48,50 @@ export default function App() {
 
       <body>
         <div className="wrapper">
-          <Outlet />
-          <ScrollRestoration />
-          <Scripts />
-          {process.env.NODE_ENV === 'development' && <LiveReload />}
+          <div className="wrapper__content">
+            <header className="header">
+              <img className="header__logo" src="/images/under-two-tables-logo-clean.svg" alt="Under Two Tables" />
+
+              <ul className="icon-nav">
+                <li>
+                  <a href="https://www.facebook.com/UnderTwoTables" target="_blank" rel="noreferrer">
+                    <img src="/images/icons/facebook.svg" alt="Find us on Facebook" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/UnderTwoTables" target="_blank" rel="noreferrer">
+                    <img src="/images/icons/twitter.svg" alt="Find us on Twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/undertwotables" target="_blank" rel="noreferrer">
+                    <img src="/images/icons/instagram.svg" alt="Find us on Instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/user/UnderTwoTables" target="_blank" rel="noreferrer">
+                    <img src="/images/icons/youtube.svg" alt="Find us on YouTube" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://open.spotify.com/artist/2PxOhe3k2gsBmXOk38u7R1" target="_blank" rel="noreferrer">
+                    <img src="/images/icons/spotify.svg" alt="Find us on Spotify" />
+                  </a>
+                </li>
+              </ul>
+            </header>
+
+            <Outlet />
+            <ScrollRestoration />
+            <Scripts />
+            {process.env.NODE_ENV === 'development' && <LiveReload />}
+          </div>
+
+          <footer>
+            <div className="container center">
+              <p className="small">&copy;{currentYear} Under Two Tables. All rights reserved.</p>
+            </div>
+          </footer>
         </div>
       </body>
     </html>

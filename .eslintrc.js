@@ -6,17 +6,26 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
-    jsx: true,
+    jsx: true
   },
 
   extends: [
     '@remix-run/eslint-config',
     '@remix-run/eslint-config/jest',
     'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
 
-  rules: {},
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 120,
+        singleQuote: true,
+        trailingComma: 'none'
+      }
+    ]
+  },
 
-  ignorePatterns: ['dist', 'build'],
+  ignorePatterns: ['dist', 'build', 'node_modules']
 };

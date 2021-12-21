@@ -1,6 +1,4 @@
 export default function Index() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <div>
       <section>
@@ -8,12 +6,10 @@ export default function Index() {
           <div className="center">
             <img className="logo" src="/images/under-two-tables-logo.svg" alt="Under Two Tables" />
 
-            <h1 className="title title--1">Under Two Tables</h1>
-
-            <p>Hello there!</p>
+            <h1 className="band-title">
+              <span>Under Two</span> Tables
+            </h1>
           </div>
-
-          <hr />
 
           <iframe
             title="Under Two Tables - Playlist"
@@ -31,7 +27,7 @@ export default function Index() {
         <div className="container">
           <div className="split">
             <div>
-              <h3 className="title title--3">Biography</h3>
+              <h3 className="title title--2">Biography</h3>
 
               <p>
                 Under Two Tables (U2T) is a Colorado based band inspired by the likes of Dave Matthews, Led Zeppelin,
@@ -48,7 +44,7 @@ export default function Index() {
             </div>
 
             <div>
-              <h3 className="title title--3">Contact Us</h3>
+              <h3 className="title title--2">Contact Us</h3>
 
               <p>
                 The band regularly performs at local venues in the Denver area, and continues to write original music.
@@ -62,47 +58,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
-      <footer>
-        <div className="container">
-          <div className="split">
-            <p>&copy;{currentYear} Under Two Tables. All rights reserved.</p>
-
-            <ul id="social" className="icon-nav">
-              <li>
-                <a href="https://www.facebook.com/UnderTwoTables" target="_blank" rel="noreferrer">
-                  <img src="/images/icons/facebook.svg" alt="Find us on Facebook" />
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/UnderTwoTables" target="_blank" rel="noreferrer">
-                  <img src="/images/icons/twitter.svg" alt="Find us on Twitter" />
-                </a>
-              </li>
-              <li>
-                <a href="https://instagram.com/undertwotables" target="_blank" rel="noreferrer">
-                  <img src="/images/icons/instagram.svg" alt="Find us on Instagram" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/user/UnderTwoTables" target="_blank" rel="noreferrer">
-                  <img src="/images/icons/youtube.svg" alt="Find us on YouTube" />
-                </a>
-              </li>
-            </ul>
-
-            <span id="contact-us-cta" className="button button--dark" directive-contact-us>
-              Contact Us
-            </span>
-          </div>
-
-          {/* <img
-            className="logo logo--small"
-            src="images/under-two-tables-logo.svg?31f4f7966eb5c23e"
-            alt="Under Two Tables"
-          /> */}
-        </div>
-      </footer>
     </div>
   );
 }

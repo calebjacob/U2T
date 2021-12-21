@@ -10,6 +10,7 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./ --fix",
     "postinstall": "remix setup node",
     "start": "remix-serve build"
   },
