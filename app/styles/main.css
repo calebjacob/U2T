@@ -98,8 +98,8 @@ section {
   flex-direction: column;
   min-height: 100%;
   background-image: url(/images/background.jpg);
-  background-position: right bottom;
-  background-size: auto 95vh;
+  background-position: right 2rem;
+  background-size: auto 1250px;
   background-repeat: no-repeat;
 }
 
@@ -268,7 +268,7 @@ section {
 
 @media (max-width: 700px) {
   .wrapper {
-    background-position: 80% bottom;
-    background-size: 300% auto;
+    background-position: 80% top;
+    background-size: auto 900px;
   }
 }

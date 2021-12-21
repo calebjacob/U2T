@@ -51,7 +51,7 @@ export default function Index() {
                 For more information, or to book Under Two Tables, shoot us an email:
               </p>
 
-              <a href="mailto:contact.under.two.tables@gmail.com" className="button" directive-contact-us>
+              <a href="mailto:contact.under.two.tables@gmail.com" className="button">
                 Send Email
               </a>
             </div>
