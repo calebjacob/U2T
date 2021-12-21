@@ -29,7 +29,7 @@ body {
   background: var(--color-surface-1);
   font-family: var(--font-family-1);
   font-size: var(--font-size-body-1);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 hr {
