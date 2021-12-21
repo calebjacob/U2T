@@ -1,9 +1,121 @@
 :root {
   --color-text-1: #fff;
-  --color-surface-1: #000;
+  --color-text-2: rgb(205, 205, 205);
+  --color-surface-1: rgb(9, 9, 9);
+  --color-surface-2: rgb(36, 36, 36);
+  --font-family-1: 'Montserrat', sans-serif;
+  --font-size-title-1: 4rem;
+  --font-size-title-2: 3rem;
+  --font-size-title-3: 2rem;
+  --font-size-body-1: 1rem;
+  --max-width: 1200px;
+  --spacing: 1rem;
+  --spacing-negative: -1rem;
+  --spacing-double: 2rem;
+}
+
+html {
+  font-size: 18px;
 }
 
 body {
   color: var(--color-text-1);
   background: var(--color-surface-1);
+  font-family: var(--font-family-1);
+  font-size: var(--font-size-body-1);
+  line-height: 1.4;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--color-surface-2);
+  margin: var(--spacing-double) 0;
+}
+
+p {
+  margin: 0 0 var(--spacing);
+  color: var(--color-text-2);
+}
+
+
+
+.center {
+  text-align: center;
+}
+
+
+
+section {
+  padding: var(--spacing-double)
+}
+
+
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+
+
+.split {
+  display: flex;
+  margin: 0 var(--spacing-negative)
+}
+
+.split > * {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+  margin: 0 var(--spacing);
+}
+
+
+
+.logo {
+  display: block;
+  max-width: 14rem;
+  margin: 0 auto var(--spacing-double);
+}
+
+
+
+.button {
+  display: inline-block;
+  padding: var(--spacing) var(--spacing-double);
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--color-text-1);
+  color: var(--color-surface-1);
+  margin: 0 0 var(--spacing);
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background: var(--color-text-2);
+}
+
+
+
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 var(--spacing);
+}
+
+.title--1 {
+  font-size: var(--font-size-title-1);
+  line-height: 1;
+}
+
+.title--2 {
+  font-size: var(--font-size-title-2);
+  line-height: 1.2;
+}
+
+.title--3 {
+  font-size: var(--font-size-title-3);
+  line-height: 1.3;
 }
