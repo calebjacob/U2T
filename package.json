@@ -37,6 +37,5 @@
   },
   "engines": {
     "node": "16.9.1"
-  },
-  "sideEffects": false
+  }
 }
