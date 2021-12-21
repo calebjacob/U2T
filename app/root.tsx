@@ -1,16 +1,32 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'remix';
 import type { MetaFunction } from 'remix';
+import SocialNav from './components/social-nav';
 import resetStyles from './styles/reset.css';
 import mainStyles from './styles/main.css';
 
 export const meta: MetaFunction = () => {
-  return { title: 'Under Two Tables' };
+  const title = 'Under Two Tables';
+  const description =
+    'A Golden, Colorado born band inspired by the likes of the Dave Matthews Band, Led Zeppelin, and Frank Sinatra.';
+
+  return {
+    title,
+    description,
+    'og:site_name': title,
+    'og:title': title,
+    'og:image': 'https://undertwotables.com/images/under-two-tables-social.jpg',
+    'og:description': description,
+    'og:type': 'website'
+  };
 };
 
 export function links() {
   return [
     { rel: 'stylesheet', href: resetStyles },
-    { rel: 'stylesheet', href: mainStyles }
+    { rel: 'stylesheet', href: mainStyles },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap' }
   ];
 }
 
@@ -23,24 +39,8 @@ export default function App() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <meta property="og:site_name" content="Under Two Tables" />
-        <meta property="og:title" content="Under Two Tables" />
-        <meta property="og:image" content="https://undertwotables.com/images/under-two-tables-social.jpg" />
-        <meta
-          property="og:description"
-          content="A Golden, Colorado born band inspired by the likes of the Dave Matthews Band, Led Zeppelin, and Frank Sinatra."
-        />
-        <meta property="og:type" content="website" />
-
-        <link rel="icon" href="/images/favicon.ico" sizes="any"></link>
-        <link rel="icon" href="/images/favicon.svg" type="image/svg+xml"></link>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-          rel="stylesheet"
-        ></link>
+        <link rel="icon" href="/favicon.ico" sizes="any"></link>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
 
         <Meta />
         <Links />
@@ -52,33 +52,7 @@ export default function App() {
             <header className="header">
               <img className="header__logo" src="/images/under-two-tables-logo-clean.svg" alt="Under Two Tables" />
 
-              <ul className="icon-nav">
-                <li>
-                  <a href="https://www.facebook.com/UnderTwoTables" target="_blank" rel="noreferrer">
-                    <img src="/images/icons/facebook.svg" alt="Find us on Facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/UnderTwoTables" target="_blank" rel="noreferrer">
-                    <img src="/images/icons/twitter.svg" alt="Find us on Twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://instagram.com/undertwotables" target="_blank" rel="noreferrer">
-                    <img src="/images/icons/instagram.svg" alt="Find us on Instagram" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/user/UnderTwoTables" target="_blank" rel="noreferrer">
-                    <img src="/images/icons/youtube.svg" alt="Find us on YouTube" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://open.spotify.com/artist/2PxOhe3k2gsBmXOk38u7R1" target="_blank" rel="noreferrer">
-                    <img src="/images/icons/spotify.svg" alt="Find us on Spotify" />
-                  </a>
-                </li>
-              </ul>
+              <SocialNav />
             </header>
 
             <Outlet />
