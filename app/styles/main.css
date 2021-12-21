@@ -99,7 +99,7 @@ section {
   min-height: 100%;
   background-image: url(/images/background.jpg);
   background-position: right bottom;
-  background-size: 1900px auto;
+  background-size: auto 95vh;
   background-repeat: no-repeat;
 }
 
@@ -262,7 +262,11 @@ section {
     display: block;
     font-size: 0.51em;
   }
+}
 
+
+
+@media (max-width: 700px) {
   .wrapper {
     background-position: 80% bottom;
     background-size: 300% auto;
