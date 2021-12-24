@@ -44,8 +44,11 @@ p {
   color: var(--color-text-2);
 }
 
-iframe {
-  margin: 0 0 var(--spacing);
+
+
+.iframe-wrapper {
+  max-width: 450px;
+  margin: 0 auto var(--spacing);
 }
 
 

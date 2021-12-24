@@ -11,15 +11,27 @@ export default function Index() {
             </h1>
           </div>
 
-          <iframe
+          {/* <iframe
             title="Under Two Tables - Playlist"
             width="100%"
-            height="166"
+            height="450"
             scrolling="no"
             frameBorder="no"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/311904562&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-          ></iframe>
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1368298396&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          ></iframe> */}
+
+          <div className="iframe-wrapper">
+            <iframe
+              title="Under Two Tables - Playlist"
+              width="100%"
+              height="450"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1368298396&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+          </div>
         </div>
       </section>
 
