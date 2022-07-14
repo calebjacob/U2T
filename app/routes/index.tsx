@@ -47,9 +47,9 @@ export default function Index() {
                 (Kameron Kincade), and a modern rock drummer (Caleb Jacob) not only gives the band their unique sound,
                 but also provides a unique perspective on the arrangement and composition of their music.
               </p>
-            </div>
 
-            <div>
+              <hr />
+
               <h3 className="title title--2">Contact Us</h3>
 
               <p>
@@ -60,6 +60,10 @@ export default function Index() {
               <a href="mailto:contact.under.two.tables@gmail.com" className="button">
                 Send Email
               </a>
+            </div>
+
+            <div>
+              <img src="/images/band.jpg" />
             </div>
           </div>
         </div>

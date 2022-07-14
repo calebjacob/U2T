@@ -16,12 +16,18 @@
   --spacing-double: 2rem;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 html {
   font-size: 18px;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 body {
@@ -44,14 +50,10 @@ p {
   color: var(--color-text-2);
 }
 
-
-
 .iframe-wrapper {
   max-width: 450px;
   margin: 0 auto var(--spacing);
 }
-
-
 
 .header {
   display: flex;
@@ -70,8 +72,6 @@ p {
   opacity: 0.5;
 }
 
-
-
 .center {
   text-align: center;
 }
@@ -80,20 +80,14 @@ p {
   font-size: var(--font-size-body-2);
 }
 
-
-
 section,
 footer {
   padding: var(--spacing-double) var(--spacing-double) var(--spacing) var(--spacing-double);
 }
 
-
-
 section {
   border-bottom: 2px solid var(--color-surface-2);
 }
-
-
 
 .wrapper {
   width: 100%;
@@ -111,18 +105,14 @@ section {
   flex: 1 0 auto;
 }
 
-
-
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
-
-
 .split {
   display: flex;
-  margin: 0 var(--spacing-negative)
+  margin: 0 var(--spacing-negative);
 }
 
 .split > * {
@@ -132,15 +122,11 @@ section {
   margin: 0 var(--spacing);
 }
 
-
-
 .logo {
   display: block;
   max-width: 14rem;
   margin: 0 auto var(--spacing-double);
 }
-
-
 
 .button {
   display: inline-block;
@@ -157,8 +143,6 @@ section {
 .button:focus {
   background: var(--color-text-2);
 }
-
-
 
 .title {
   font-weight: 400;
@@ -178,8 +162,6 @@ section {
   line-height: 1.2;
 }
 
-
-
 .band-title {
   font-size: 3rem;
   font-weight: 700;
@@ -192,8 +174,6 @@ section {
 .band-title span {
   white-space: nowrap;
 }
-
-
 
 .icon-nav {
   display: flex;
@@ -225,8 +205,6 @@ section {
   width: 100%;
 }
 
-
-
 @media (max-width: 1000px) {
   .split {
     display: block;
@@ -249,8 +227,6 @@ section {
   }
 }
 
-
-
 @media (max-width: 920px) {
   html {
     font-size: 16px;
@@ -259,14 +235,12 @@ section {
   .band-title {
     font-size: 2.8rem;
   }
-  
+
   .band-title span {
     display: block;
     font-size: 0.51em;
   }
 }
-
-
 
 @media (max-width: 700px) {
   .wrapper {
