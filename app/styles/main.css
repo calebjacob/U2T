@@ -28,6 +28,7 @@ html {
 img {
   display: block;
   width: 100%;
+  margin: 0 0 var(--spacing);
 }
 
 body {
@@ -53,6 +54,17 @@ p {
 .iframe-wrapper {
   max-width: 450px;
   margin: 0 auto var(--spacing);
+}
+
+.link {
+  display: inline-block;
+  color: var(--color-text-1);
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 150ms;
+}
+.link:hover {
+  color: var(--color-text-2);
 }
 
 .header {
