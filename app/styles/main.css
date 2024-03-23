@@ -70,7 +70,6 @@ p {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: var(--spacing-half);
   position: sticky;
   top: 0;
@@ -80,8 +79,10 @@ p {
 
 .header__logo {
   display: block;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   opacity: 0.5;
+  margin-right: auto;
 }
 
 .center {
