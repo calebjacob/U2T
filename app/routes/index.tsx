@@ -16,7 +16,7 @@ export default function Index() {
       <section>
         <div className="container">
           <div className="iframe-wrapper">
-            <iframe
+            {/* <iframe
               title="Under Two Tables - Playlist"
               width="100%"
               height="450"
@@ -24,6 +24,17 @@ export default function Index() {
               frameBorder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1368298396&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>*/}
+
+            <iframe
+              title="Under Two Tables - Playlist"
+              style={{ borderRadius: '12px' }}
+              src="https://open.spotify.com/embed/album/7k9HtTPrQ29LSeD4IpMDfr?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
@@ -36,9 +47,9 @@ export default function Index() {
               <h3 className="title title--2">Biography</h3>
 
               <p>
-                Under Two Tables (U2T) is a Colorado based band inspired by the likes of Dave Matthews, Led Zeppelin,
-                and Frank Sinatra. Offering a blend of rock, alternative-pop, and jazz, the band's sound encompasses a
-                wide variety of musical flavors.
+                Under Two Tables (U2T) is a Colorado based band inspired by the likes of Dave Matthews and Led Zeppelin.
+                Offering a blend of rock, alternative-pop, and jazz, the band's sound encompasses a wide variety of
+                musical flavors.
               </p>
 
               <p>
