@@ -15,27 +15,31 @@ export default function Index() {
 
       <section>
         <div className="container">
-          <div className="iframe-wrapper">
-            {/* <iframe
-              title="Under Two Tables - Playlist"
-              width="100%"
-              height="450"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1368298396&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-            ></iframe>*/}
+          <div className="blocks">
+            <div className="iframe-wrapper">
+              <div className="loading" />
+              <iframe
+                title="Under Two Tables - Playlist"
+                style={{ borderRadius: '12px' }}
+                src="https://open.spotify.com/embed/album/7k9HtTPrQ29LSeD4IpMDfr?utm_source=generator&theme=0"
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
 
-            <iframe
-              title="Under Two Tables - Playlist"
-              style={{ borderRadius: '12px' }}
-              src="https://open.spotify.com/embed/album/7k9HtTPrQ29LSeD4IpMDfr?utm_source=generator&theme=0"
-              width="100%"
-              height="352"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
+            <div className="iframe-wrapper instagram">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/undertwotables/?utm_source=ig_embed&amp;utm_campaign=loading"
+                data-instgrm-version="14"
+              >
+                <div className="loading" />
+              </blockquote>
+              <script async src="//www.instagram.com/embed.js"></script>
+            </div>
           </div>
         </div>
       </section>

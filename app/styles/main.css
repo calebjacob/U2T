@@ -51,9 +51,123 @@ p {
   color: var(--color-text-2);
 }
 
+.blocks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 600px) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    gap: 1rem;
+  }
+}
+
 .iframe-wrapper {
-  max-width: 450px;
-  margin: 0 auto var(--spacing);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  aspect-ratio: 582 / 545;
+
+  iframe {
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @media (max-width: 1100px) {
+    aspect-ratio: 1 / 0.95;
+  }
+
+  @media (max-width: 900px) {
+    aspect-ratio: unset;
+    height: 370px;
+
+    &.instagram {
+      aspect-ratio: 1 / 0.85;
+      height: unset;
+    }
+  }
+
+  @media (max-width: 750px) {
+    &.instagram {
+      aspect-ratio: 1 / 0.925;
+      height: unset;
+    }
+  }
+
+  @media (max-width: 620px) {
+    &.instagram {
+      aspect-ratio: 1 / 0.95;
+      height: unset;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &.instagram {
+      aspect-ratio: 1 / 0.975;
+      height: unset;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &.instagram {
+      aspect-ratio: 1 / 1.025;
+      height: unset;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &.instagram {
+      aspect-ratio: 1 / 1.1;
+      height: unset;
+    }
+  }
+}
+
+.iframe-wrapper.instagram:has(.loading) {
+  iframe {
+    opacity: 0;
+  }
+}
+
+.iframe-wrapper iframe {
+  width: 100% !important;
+  position: relative !important;
+  transition: opacity 300ms;
+  min-height: 10rem;
+}
+
+.iframe-wrapper .loading {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .link {
